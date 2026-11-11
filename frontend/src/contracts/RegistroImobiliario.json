@@ -1,0 +1,266 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "id",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "proprietarioNome",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "valorAvaliacao",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "funcionarioResponsavel",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "data",
+				"type": "uint256"
+			}
+		],
+		"name": "ImovelCadastrado",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "id",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "proprietarioAnterior",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "novoProprietario",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "valorNegociacao",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "funcionarioResponsavel",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "data",
+				"type": "uint256"
+			}
+		],
+		"name": "ImovelTransferido",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_id",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_descricao",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_localizacao",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_valorAvaliacao",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_proprietarioNome",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_proprietarioCpf",
+				"type": "string"
+			}
+		],
+		"name": "cadastrarImovel",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_id",
+				"type": "string"
+			}
+		],
+		"name": "consultarHistorico",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "proprietarioAnterior",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "cpfAnterior",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "novoProprietario",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "cpfNovo",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "valorNegociacao",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "data",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "funcionarioResponsavel",
+						"type": "address"
+					}
+				],
+				"internalType": "struct RegistroImobiliario.RegistroHistorico[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_id",
+				"type": "string"
+			}
+		],
+		"name": "consultarImovel",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "id",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "descricao",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "localizacao",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "valorAvaliacao",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "proprietarioNome",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "proprietarioCpf",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "funcionarioCartorio",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_id",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_novoProprietario",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_novoCpf",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_valorNegociacao",
+				"type": "uint256"
+			}
+		],
+		"name": "registrarTransferencia",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
