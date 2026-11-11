@@ -1,16 +1,22 @@
-# React + Vite
+Protótipo de Arquitetura Descentralizada para Rastreabilidade Registral de Imóveis utilizando Blockchain
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Descrição
+Este repositório contém o código-fonte do protótipo desenvolvido no Trabalho de Conclusão de Curso, com o objetivo de explorar a utilização da tecnologia blockchain Ethereum na rastreabilidade de registros imobiliários.
+A solução utiliza um smart contract desenvolvido em Solidity e uma aplicação web integrada à rede Ethereum Sepolia, permitindo o cadastro de imóveis, a consulta de informações, o registro de transferências de titularidade e a consulta do histórico de operações.
 
-Currently, two official plugins are available:
+Tecnologias utilizadas
+Solidity (^0.8.20)
+Ethereum
+Ethereum Sepolia Testnet
+MetaMask
+React
+Vite
+JavaScript
+CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Estrutura do repositório
+contracts/: código-fonte do smart contract RegistroImobiliario.sol.
+frontend/: código-fonte da aplicação web.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Observação
+Este projeto possui finalidade acadêmica e experimental, utilizando dados fictícios para demonstrar o funcionamento das funcionalidades implementadas.
